@@ -1,0 +1,112 @@
+1:test.recommend_user(user_id = 11, rerank_ = True, n_reco = 10, show_rating = False)
+
+This is the function to get a specific user's recommendation.
+        
+        Parameters:
+        
+        user_id: From 1 to 671. Should be integer.
+            If you have run recommend_me, you can use your own user_id.
+            Default is 10.
+        rerank_: True or False
+            Decide whether to rerank the result or not.
+            Default is True.
+        n_reco: From 10 - 90. Should be integer.
+            Decide how many results you want.
+            Default is 10.
+        show_rating: True or False.
+            Decide whether or not to show the user's all ratings.
+            Default is False.
+
+2:test.random_user(rerank_ = True, n_reco = 10, show_rating = False)
+
+Function to randomly retrieve a user's recommendation.
+        
+        Parameters:
+            
+        rerank_: True or False
+            Decide whether to rerank the result or not.
+            Default is True.
+        n_reco: From 10 - 90. Should be integer.
+            Decide how many results you want.
+            Default is 10.
+        show_rating: True or False.
+            Decide whether or not to show the user's all ratings.
+            Default is False.
+
+3:test.recommend_me(rerank_ = True, n_reco = 10, show_rating = False):
+        
+This is the function to get a your recommendations.
+        
+        Parameters:
+
+        rerank_: True or False
+            Decide whether to rerank the result or not.
+            Default is True.
+        n_reco: From 10 - 90. Should be integer.
+            Decide how many results you want.
+            Default is 10.
+        show_rating: True or False.
+            Decide whether or not to show the user's all ratings.
+            Default is False.
+
+The recommender will choose some films for you to rate until you rated 15 films we will move on to learning your data. Please enter your ratings from 1 to 5 (including 1 and 5) and press return(enter) on your keyboard. We accept float numbers.
+If you haven't seen this film, you can type -1 and press return(enter) to move on to next film. 
+The test has limited number of films so if you haven't watched all of them, please watch them and then come back to rate!
+If you did wrong in entering the ratings. We will not save your previous data and we have to start over.
+If you are a new user or you rate new films and save the data, this process will take a while, please be patient.
+
+4:test.rate(user_id = 672)
+
+Function to rate new films.
+        
+        Parameters:
+        
+        user_id: Your user id. Default is 672. Should be greater than 671 since smaller number are original users, you should't update their ratings.
+        
+Type test.rate() or test.rate(user_id = YOUR USER ID). If you only only runs recommend me once. Then your user id is 672(default) then you don't need to enter your id.
+Attention: Ple
+We will not delete your user ratings when you close the recommender. And when you open the recommender next time, the system will use the latest version of user rating file.
+So please be careful when you rate a film. And you might re-rate a film since we haven't created new function to help you overlap your old ratings.
+
+5.test.save()
+
+Function to save user's information.
+
+6.test.rate_for_fun(novelty = 1)
+
+Function to rate films randomly.
+        
+        Parameter:
+        
+        Novelty: From 1- 30. Should be integer.
+            The degree of the film's novelty you want. Bigger number means more surprise!
+The process is same as the cold starter rating function.
+Attention: Enter -1 to skip this film. If you want to end and save the ratings, enter 11. If you don't want to save, enter 12 or close the program.
+
+
+7.test.reset()
+
+Type test.reset() to reset every thing! But I won't delete any files actually. Just reset the data to the original one
+
+8.test.bsl_recommend_user(user_id = 10, n_reco = 10, model = "baseline"):
+
+        This is the function to get a specific user's baseline model recommendation.
+        
+        Parameters:
+        
+        user_id: From 1 to 671. Should be integer.
+            If you have run recommend_me, you can use your own user_id.
+            Default is 10.
+        n_reco: From 10 - 90. Should be integer.
+            Decide how many results you want.
+            Default is 10.
+        model: baseline or svd. Should be string format.
+            The model you want to compare.
+
+9.test.bsl_recommend()
+
+Function to calculate recommendations. Use it if you add new data.
+
+10.test.update_all()
+
+Update all users' recommendations.
